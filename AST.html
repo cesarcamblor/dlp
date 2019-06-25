@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+.value { font-weight: bold; }
+.dots { color: #bebdbd; }
+.type { color: #BBBBBB; }
+.pos { color: #CCCCCC; }
+.sourceText { color: #BBBBBB; }
+.posText {
+	color: #BBBBBB;
+	text-decoration: underline; font-weight: bold;
+}
+.null {
+	color: #FF0000;
+	font-weight: bold;
+	font-style: italic;
+}
+</style>
+</head>
+
+<body><pre>
+[ASTPrinter] -------------------------------- line:col  line:col
+
+<span class="dots"></span>Program &rarr;                                                   <span class="pos">3:1  13:12   </span><span class="sourceText"></span><span class="posText">main(){</span><span class="sourceText"> ... </span><span class="posText">print hello</span><span class="sourceText">;</span>
+<span class="dots">.  </span>definitions  <span class="type">List&lt;Definitions&gt;</span> = 
+<span class="dots">.  .  </span>DefinitionFuncion &rarr;                                   <span class="pos">3:1  13:12   </span><span class="sourceText"></span><span class="posText">main(){</span><span class="sourceText"> ... </span><span class="posText">print hello</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  </span>"<span class="value">main</span>"  
+<span class="dots">.  .  |  </span>param  <span class="type">List&lt;Definitions&gt;</span> = 
+<span class="dots">.  .  |  </span>definitions  <span class="type">List&lt;Definitions&gt;</span> = 
+<span class="dots">.  .  |  .  </span>DefinitionVariable &rarr;                            <span class="pos">4:6  4:13    </span><span class="sourceText">var </span><span class="posText">hello:[5</span><span class="sourceText">] char;</span>
+<span class="dots">.  .  |  .  |  </span>"<span class="value">hello</span>"  
+<span class="dots">.  .  |  .  |  </span><span class="value">-5</span>  <span class="type">int</span>
+<span class="dots">.  .  |  .  |  </span>TypeArray &rarr;                                  <span class="pos">4:13  4:13   </span><span class="sourceText">var hello:[</span><span class="posText">5</span><span class="sourceText">] char;</span>
+<span class="dots">.  .  |  .  |  .  </span>"<span class="value">5</span>"  <span class="type">List&lt;String&gt;</span>
+<span class="dots">.  .  |  .  |  .  </span><span class="value">TypeChar</span> &rarr;                                <span class="pos"><span class="null">null</span>  <span class="null">null</span>   </span>
+<span class="dots">.  .  |  .  </span>DefinitionVariable &rarr;                            <span class="pos">5:6  5:18    </span><span class="sourceText">var </span><span class="posText">intVector:[10</span><span class="sourceText">] int;</span>
+<span class="dots">.  .  |  .  |  </span>"<span class="value">intVector</span>"  
+<span class="dots">.  .  |  .  |  </span><span class="value">-25</span>  <span class="type">int</span>
+<span class="dots">.  .  |  .  |  </span>TypeArray &rarr;                                  <span class="pos">5:17  5:18   </span><span class="sourceText">var intVector:[</span><span class="posText">10</span><span class="sourceText">] int;</span>
+<span class="dots">.  .  |  .  |  .  </span>"<span class="value">10</span>"  <span class="type">List&lt;String&gt;</span>
+<span class="dots">.  .  |  .  |  .  </span><span class="value">TypeInt</span> &rarr;                                 <span class="pos"><span class="null">null</span>  <span class="null">null</span>   </span>
+<span class="dots">.  .  |  .  </span>DefinitionVariable &rarr;                            <span class="pos">6:6  6:21    </span><span class="sourceText">var </span><span class="posText">doubleVector:[10</span><span class="sourceText">] float;</span>
+<span class="dots">.  .  |  .  |  </span>"<span class="value">doubleVector</span>"  
+<span class="dots">.  .  |  .  |  </span><span class="value">-65</span>  <span class="type">int</span>
+<span class="dots">.  .  |  .  |  </span>TypeArray &rarr;                                  <span class="pos">6:20  6:21   </span><span class="sourceText">var doubleVector:[</span><span class="posText">10</span><span class="sourceText">] float;</span>
+<span class="dots">.  .  |  .  |  .  </span>"<span class="value">10</span>"  <span class="type">List&lt;String&gt;</span>
+<span class="dots">.  .  |  .  |  .  </span><span class="value">TypeReal</span> &rarr;                                <span class="pos"><span class="null">null</span>  <span class="null">null</span>   </span>
+<span class="dots">.  .  |  </span>body  <span class="type">List&lt;Sentence&gt;</span> = 
+<span class="dots">.  .  |  .  </span>SentenceAssignment &rarr;                            <span class="pos">8:2  8:15    </span><span class="sourceText"></span><span class="posText">hello[0] = 'h'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  |  </span>ExpressionArray &rarr;                            <span class="pos">8:2  8:8     </span><span class="sourceText"></span><span class="posText">hello[0</span><span class="sourceText">] = 'h';</span>
+<span class="dots">.  .  |  .  |  .  </span>"hello"  <span class="type">ExpressionVariable.value</span>         <span class="pos">8:2  8:6     </span><span class="sourceText"></span><span class="posText">hello</span><span class="sourceText">[0] = 'h';</span>
+<span class="dots">.  .  |  .  |  .  </span>"0"  <span class="type">ExpressionIntCte.value</span>               <span class="pos">8:8  8:8     </span><span class="sourceText">hello[</span><span class="posText">0</span><span class="sourceText">] = 'h';</span>
+<span class="dots">.  .  |  .  |  </span>"h"  <span class="type">ExpressionCharCte.value</span>                 <span class="pos">8:13  8:15   </span><span class="sourceText">hello[0] = </span><span class="posText">'h'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  </span>SentenceAssignment &rarr;                            <span class="pos">9:2  9:15    </span><span class="sourceText"></span><span class="posText">hello[1] = 'e'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  |  </span>ExpressionArray &rarr;                            <span class="pos">9:2  9:8     </span><span class="sourceText"></span><span class="posText">hello[1</span><span class="sourceText">] = 'e';</span>
+<span class="dots">.  .  |  .  |  .  </span>"hello"  <span class="type">ExpressionVariable.value</span>         <span class="pos">9:2  9:6     </span><span class="sourceText"></span><span class="posText">hello</span><span class="sourceText">[1] = 'e';</span>
+<span class="dots">.  .  |  .  |  .  </span>"1"  <span class="type">ExpressionIntCte.value</span>               <span class="pos">9:8  9:8     </span><span class="sourceText">hello[</span><span class="posText">1</span><span class="sourceText">] = 'e';</span>
+<span class="dots">.  .  |  .  |  </span>"e"  <span class="type">ExpressionCharCte.value</span>                 <span class="pos">9:13  9:15   </span><span class="sourceText">hello[1] = </span><span class="posText">'e'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  </span>SentenceAssignment &rarr;                            <span class="pos">10:2  10:15  </span><span class="sourceText"></span><span class="posText">hello[2] = 'l'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  |  </span>ExpressionArray &rarr;                            <span class="pos">10:2  10:8   </span><span class="sourceText"></span><span class="posText">hello[2</span><span class="sourceText">] = 'l';</span>
+<span class="dots">.  .  |  .  |  .  </span>"hello"  <span class="type">ExpressionVariable.value</span>         <span class="pos">10:2  10:6   </span><span class="sourceText"></span><span class="posText">hello</span><span class="sourceText">[2] = 'l';</span>
+<span class="dots">.  .  |  .  |  .  </span>"2"  <span class="type">ExpressionIntCte.value</span>               <span class="pos">10:8  10:8   </span><span class="sourceText">hello[</span><span class="posText">2</span><span class="sourceText">] = 'l';</span>
+<span class="dots">.  .  |  .  |  </span>"l"  <span class="type">ExpressionCharCte.value</span>                 <span class="pos">10:13  10:15 </span><span class="sourceText">hello[2] = </span><span class="posText">'l'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  </span>SentenceAssignment &rarr;                            <span class="pos">11:2  11:15  </span><span class="sourceText"></span><span class="posText">hello[3] = 'l'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  |  </span>ExpressionArray &rarr;                            <span class="pos">11:2  11:8   </span><span class="sourceText"></span><span class="posText">hello[3</span><span class="sourceText">] = 'l';</span>
+<span class="dots">.  .  |  .  |  .  </span>"hello"  <span class="type">ExpressionVariable.value</span>         <span class="pos">11:2  11:6   </span><span class="sourceText"></span><span class="posText">hello</span><span class="sourceText">[3] = 'l';</span>
+<span class="dots">.  .  |  .  |  .  </span>"3"  <span class="type">ExpressionIntCte.value</span>               <span class="pos">11:8  11:8   </span><span class="sourceText">hello[</span><span class="posText">3</span><span class="sourceText">] = 'l';</span>
+<span class="dots">.  .  |  .  |  </span>"l"  <span class="type">ExpressionCharCte.value</span>                 <span class="pos">11:13  11:15 </span><span class="sourceText">hello[3] = </span><span class="posText">'l'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  </span>SentenceAssignment &rarr;                            <span class="pos">12:2  12:15  </span><span class="sourceText"></span><span class="posText">hello[4] = 'o'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  |  </span>ExpressionArray &rarr;                            <span class="pos">12:2  12:8   </span><span class="sourceText"></span><span class="posText">hello[4</span><span class="sourceText">] = 'o';</span>
+<span class="dots">.  .  |  .  |  .  </span>"hello"  <span class="type">ExpressionVariable.value</span>         <span class="pos">12:2  12:6   </span><span class="sourceText"></span><span class="posText">hello</span><span class="sourceText">[4] = 'o';</span>
+<span class="dots">.  .  |  .  |  .  </span>"4"  <span class="type">ExpressionIntCte.value</span>               <span class="pos">12:8  12:8   </span><span class="sourceText">hello[</span><span class="posText">4</span><span class="sourceText">] = 'o';</span>
+<span class="dots">.  .  |  .  |  </span>"o"  <span class="type">ExpressionCharCte.value</span>                 <span class="pos">12:13  12:15 </span><span class="sourceText">hello[4] = </span><span class="posText">'o'</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  </span>SentencePrint &rarr;                                 <span class="pos">13:8  13:12  </span><span class="sourceText">print </span><span class="posText">hello</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  |  </span>"hello"  <span class="type">ExpressionVariable.value</span>            <span class="pos">13:8  13:12  </span><span class="sourceText">print </span><span class="posText">hello</span><span class="sourceText">;</span>
+<span class="dots">.  .  |  .  |  </span>"<span class="value"></span>"  
+
+[ASTPrinter] --------------------------------
+</pre>
+</body>
+</html>

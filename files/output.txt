@@ -1,0 +1,107 @@
+#source "Examen1.txt"
+call main
+halt
+#func main
+main:
+#ret void
+#local hello:5*char
+#local intVector:10*int
+#local doubleVector:10*float
+enter 65
+#LINE 8
+pusha bp
+push -5
+add
+push 0
+push 1
+mul
+add
+pushb 104
+storeb
+#LINE 9
+pusha bp
+push -5
+add
+push 1
+push 1
+mul
+add
+pushb 101
+storeb
+#LINE 10
+pusha bp
+push -5
+add
+push 2
+push 1
+mul
+add
+pushb 108
+storeb
+#LINE 11
+pusha bp
+push -5
+add
+push 3
+push 1
+mul
+add
+pushb 108
+storeb
+#LINE 12
+pusha bp
+push -5
+add
+push 4
+push 1
+mul
+add
+pushb 111
+storeb
+#LINE 13
+pusha bp
+push -5
+add
+push 0
+push 1
+mul
+add
+loadb
+outb
+pusha bp
+push -5
+add
+push 1
+push 1
+mul
+add
+loadb
+outb
+pusha bp
+push -5
+add
+push 2
+push 1
+mul
+add
+loadb
+outb
+pusha bp
+push -5
+add
+push 3
+push 1
+mul
+add
+loadb
+outb
+pusha bp
+push -5
+add
+push 4
+push 1
+mul
+add
+loadb
+outb
+ret 0, 65,0

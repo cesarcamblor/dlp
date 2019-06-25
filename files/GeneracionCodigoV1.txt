@@ -1,0 +1,37 @@
+/*
+Test para probar la Fase de Generaci�n de C�digo
+
+COMPROBACION: Al ejecutarlo la salida deber�a ser la que indican los comentarios.
+
+CONSEJO: No limitarse a comprobar el resultado de la ejecuci�n. Se recomienda adem�s abrir el fichero generado usando el depurador GVM y comprobar sus instrucciones.
+Para facilitar esta tarea es de gran utilidad que el alumno haya generado directivas '#line' en el fichero de salida.
+Para informaci�n sobre la funci�n de dicha directiva se debe abrir con GVM el siguiente tutorial: 
+Tutorial\3 Uso b�sico del depurador\4 Fusi�n Alto Nivel.txt
+
+NOTA: Es posible que el alumno deba cambiar ligeramente este ejemplo para que coincida con la sintaxis de la pr�ctica del alumno.
+*/
+
+var a:int;
+var b:float;
+
+struct Punto {
+	x:float;
+	y:float;
+};
+
+var v:[5]int;
+var p:Punto;
+
+main() {
+	a = 1111;
+	b = 2222.2;
+	v[3] = 3333;
+	p.y = 4444.4;
+		
+	print a;		// 1111
+	print b + p.y;	// 6666.6
+	print v[3];		// 3333
+
+	print a > 0 && b < 3333.3;	// 1
+	print cast<int>(b);			// 2222
+}

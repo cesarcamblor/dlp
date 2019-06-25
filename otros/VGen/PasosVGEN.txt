@@ -1,0 +1,5 @@
+Generar Gramatica abstracta y guardarla en abstracta.txt
+Pasar VGEN a dicha gramatica
+Sustituir las carpetas ast y visitor
+Cambiar la gramatica para añadir los return y demas
+Pasar antlr

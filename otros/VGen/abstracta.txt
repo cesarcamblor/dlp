@@ -1,0 +1,37 @@
+CATEGORIES
+expression, sentence, type, definitions
+
+NODES
+program -> definitions:definitions*;
+
+DefinitionVariable:definitions -> name:string type:type;
+DefinitionStruct:definitions -> name:string body:definitions*;
+DefinitionFuncion:definitions -> name:string type:type param:definitions* definitions:definitions* body:sentence*  ;
+
+SentencePrint:sentence -> expr:expression accion:string;
+SentenceRead:sentence -> expression;
+SentenceAssignment:sentence -> left:expression right:expression;
+SentenceIf:sentence -> condition:expression trueCon:sentence* falseCon:sentence*;
+SentenceWhile:sentence -> condition:expression trueCon:sentence*;
+SentenceFunctionCall:sentence -> name:string param:expression*;
+SentenceReturn:sentence -> expression;
+
+ExpressionIntCte:expression -> value:string;
+ExpressionRealCte:expression -> value:string;
+ExpressionCharCte:expression -> value:char;
+ExpressionVariable:expression -> value:string;
+ExpressionArithmetic:expression -> left:expression op:string right:expression;
+ExpressionComparision:expression -> left:expression op:string right:expression;
+ExpressionOperator:expression -> left:expression op:string right:expression;
+ExpressionNegative:expression -> expression;
+ExpressionMinus: expression -> expression;
+ExpressionCast:expression -> castTo:type castFrom:expression;
+ExpressionElements:expression -> left:expression right:string;
+ExpressionArray:expression -> left:expression right:expression;
+ExpressionFunctionCall:expression -> name:string param:expression*;
+
+TypeArray:type -> dimension:string type:type ;
+TypeStruct:type -> name:string;
+TypeInt:type -> ;
+TypeChar:type -> ;
+TypeReal:type -> ;
